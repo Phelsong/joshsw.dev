@@ -5,7 +5,7 @@ function App() {
     <div className="App"> 
     <Nav />
     <Main />
-    hi </div>
+    </div>
   );
 }
 

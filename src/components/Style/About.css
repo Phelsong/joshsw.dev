@@ -1,0 +1,19 @@
+@font-face {
+        font-family: Righteous;
+        src: url(../Assets/Righteous-Regular.ttf);
+    }
+
+.about-container{
+    flex-flow: column;
+}
+.languages-container{
+    font-family: Righteous;
+}
+.frameworks-container {
+    font-family: Righteous;
+}
+.about-icon{
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+}
