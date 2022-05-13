@@ -9,7 +9,13 @@
 .languages-container{
     font-family: Righteous;
 }
-.frameworks-container {
+.frontend-container{
+    font-family: Righteous;
+}
+.api-container{
+    font-family: Righteous;
+}
+.backend-container {
     font-family: Righteous;
 }
 .about-icon{
