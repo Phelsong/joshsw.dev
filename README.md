@@ -2,5 +2,5 @@
 
 ## Stack
 
-React 18
-UIKit
+`React 18`
+`UIKit`
