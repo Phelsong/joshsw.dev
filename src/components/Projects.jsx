@@ -6,7 +6,7 @@ function Projects() {
     <div className="projects-container">
       <div className="projects-sub-container">
         <img
-          src="../Assets/blueboxsplash.jpg"
+          src={require("../Assets/blueboxsplash.jpg")}
           alt="bluebox"
           className="projects-img"
         />
@@ -40,6 +40,30 @@ function Projects() {
         </span>
         <Link
           to={`//github.com/Phelsong/project-ynix`}
+          target="_blank"
+          uk-icon="github-alt"
+        />
+      </div>
+      <div className="projects-sub-container">
+      <img
+          src={require("../Assets/connect-four-splash.jpg")}
+          alt="connect-four-splash"
+          className="projects-img"
+        />
+        <span className="projects-name">Connect Four</span>
+        <span className="projects-description">
+          Role:
+          <br />
+          Fullstack Developer
+          <br />
+        </span>
+        <Link
+          to={`//sharp-varahamihira-32ec8e.netlify.app/`}
+          target="_blank"
+          uk-icon="link"
+        />
+        <Link
+          to={`//github.com/github.com/Phelsong/Arcade-Connect-4`}
           target="_blank"
           uk-icon="github-alt"
         />

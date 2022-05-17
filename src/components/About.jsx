@@ -92,7 +92,7 @@ function About() {
           PowerShell
           </span>
           <span className="tech-sub-container">
-          <img src="../Assets/BeekeeperLogopng" alt="beekeeper" className="about-icon"/>
+          <svg src={require("../Assets/BeekeeperLogo.svg")} alt="beekeeper" className="about-icon"/>
             Beekeeper 
             </span>
         </div>

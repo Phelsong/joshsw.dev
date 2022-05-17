@@ -6,7 +6,7 @@ function Nav() {
     <div className="nav-container">
       <Link to="/about" uk-icon="info"></Link>
       <div className="nav-logo-container">
-        <img src="../Assets/JwilkDevLogo.svg" alt="logo" />
+        <svg src={require("../Assets/JwilkDevLogo.svg")} alt="logo"/>
         <h3>Josh S Wilkinson</h3>
       </div>
       <Link to="/Projects" uk-icon="code"></Link>
