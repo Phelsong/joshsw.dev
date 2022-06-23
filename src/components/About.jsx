@@ -25,6 +25,9 @@ import "../Assets/BeekeeperLogopng.png"
 function About() {
   return (
     <div className="about-container">
+      <div className="about-paragraph">
+        Some stuff about me here...
+      </div>
       <div className="languages-container">
       <h5 className="about-title"> Main Languages : </h5>
       <span className="tech-sub-container">
