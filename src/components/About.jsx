@@ -26,7 +26,7 @@ function About() {
   return (
     <div className="about-container">
       <div className="about-paragraph">
-        Some stuff about me here...
+        I'm formally a working Director of Photography, that has since moved onto development. I'm a University of Texas/FullStack Academy graduate. I love building beautiful solutions to complex problems and creating things that have never been seen before.
       </div>
       <div className="languages-container">
       <h5 className="about-title"> Main Languages : </h5>
