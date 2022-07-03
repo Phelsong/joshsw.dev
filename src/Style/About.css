@@ -32,7 +32,8 @@
 }
 .tech-sub-container{
     max-height: 20%;
-    flex:1;
+    min-width: 90%;
+    padding: 1rem .5rem 1rem .5rem;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -54,11 +55,13 @@
     border:2px black solid;
 }
 .about-icon{
-    width: 4rem;
-    height: 4rem;
-    padding: .5rem;
+    min-width: 2rem;
+    min-height: 2rem;
+   padding: .2rem;
 }
-#beekeeper{
+.beekeeper{
     color:black;
-
+    width: 1rem;
+    min-height: 2rem;
+    padding: .2rem;
 }
