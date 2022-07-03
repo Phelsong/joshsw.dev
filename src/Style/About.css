@@ -5,15 +5,40 @@
 
 .about-container {
     width: 100%;
-    padding: 2rem;
+    padding: 4rem;
     flex-flow: column;
     align-items: center;
+}
+
+.bio {
+    flex-flow: row nowrap;
+    min-width: 80%;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+}
+
+.headshot {
+    max-width: 40%;
+    padding: 3rem;
+}
+
+.about-paragraph {
+    min-height: 10rem;
+    max-width: 40rem;
+    margin: 3rem;
+    padding:2rem;
+    font-size: larger;
+    line-height: 2;
+    text-shadow: .1px .1px .6px black;
 }
 
 .languages-container {
     min-height: 12rem;
     min-width: 60%;
     padding: .5rem;
+    margin: 2rem 0 3rem 0;
     font-family: Righteous;
     align-items: center;
     justify-content: center;
@@ -28,16 +53,13 @@
     font-size: 1.35rem;
 }
 
-.about-paragraph {
-    height: 10rem;
-    margin: 1rem;
-}
+
 
 .tech-container {
+    height: 100%;
     flex: 1;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
+    flex-flow: row nowrap;
+    align-content: flex-start;
 }
 
 .tech-sub-container {
@@ -51,44 +73,46 @@
     text-align: center;
 }
 
+.tech-about-main {
+    flex-flow: row;
+    justify-content: space-around;
+}
+
 .frontend-container {
-    min-height: 20rem;
+    min-height: 30rem;
+    min-width: 8rem;
     padding: .5rem;
     font-family: Righteous;
     flex-flow: column;
-    border: 2px black solid;
+
 }
 
 .api-container {
-    min-height: 20rem;
+    min-height: 30rem;
+    min-width: 8rem;
     padding: .5rem;
     font-family: Righteous;
     flex-flow: column;
-    border: 2px black solid;
-}
-
-.backend-container {
-    min-height: 20rem;
-    padding: .5rem;
-    font-family: Righteous;
-    flex-flow: column;
-    border: 2px black solid;
 }
 
 .about-icon-main {
     max-width: 4rem;
+    width: 40%;
     min-height: 4rem;
     padding: .5rem;
 }
 
 .about-icon {
+    width: 40%;
     max-width: 2.5rem;
     min-height: 2.5rem;
     padding: .2rem;
+    margin: .5rem;
 }
 
 .about-icon-manual {
     max-width: 2.5rem;
     min-height: 2.5rem;
     padding: .2rem;
+    margin: .5rem;
 }
