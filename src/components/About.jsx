@@ -31,11 +31,11 @@ function About() {
       <div className="languages-container">
       <h5 className="about-title"> Main Languages : </h5>
       <span className="tech-sub-container">
-        <IoLogoJavascript className="about-icon" />
+        <IoLogoJavascript className="about-icon-main" />
         JavaScript
         </span>
         <span className="tech-sub-container">
-        <FaPython className="about-icon" />
+        <FaPython className="about-icon-main" />
         Python
         </span>
       </div>
@@ -72,8 +72,8 @@ function About() {
           Flask
           </span>
           <span className="tech-sub-container">
-          <SiDjango className="about-icon" />
-          Django
+          <img src={require("../Assets/fastapi-png.png")} alt="fast api" className="about-icon-manual" />
+          FastAPI
           </span>
           <span className="tech-sub-container">
           <SiPostman className="about-icon" />
@@ -97,7 +97,7 @@ function About() {
           PowerShell
           </span>
           <span className="tech-sub-container">
-          <img src={require("../Assets/BeekeeperLogopng-black.png")} alt="beekeeper" className="beekeeper"/>
+          <img src={require("../Assets/BeekeeperLogopng-black.png")} alt="beekeeper" className="about-icon-manual"/>
           Beekeeper 
             </span>
         </div>

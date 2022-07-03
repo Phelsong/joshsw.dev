@@ -1,22 +1,25 @@
 @font-face {
-        font-family: Righteous;
-        src: url(../Assets/Righteous-Regular.ttf);
-    }
+    font-family: Righteous;
+    src: url(../Assets/Righteous-Regular.ttf);
+}
 
-.about-container{
+.about-container {
     width: 100%;
-    height: 90%;
+    padding: 2rem;
     flex-flow: column;
     align-items: center;
 }
-.languages-container{
-    height: 10rem;
-    width: 60%;
+
+.languages-container {
+    min-height: 12rem;
+    min-width: 60%;
+    padding: .5rem;
     font-family: Righteous;
     align-items: center;
     justify-content: center;
     flex-flow: column;
 }
+
 .about-title {
     height: 2rem;
     align-items: center;
@@ -24,44 +27,68 @@
     text-align: center;
     font-size: 1.35rem;
 }
+
+.about-paragraph {
+    height: 10rem;
+    margin: 1rem;
+}
+
 .tech-container {
     flex: 1;
     flex-flow: row;
     align-items: center;
     justify-content: center;
 }
-.tech-sub-container{
-    max-height: 20%;
-    min-width: 90%;
+
+.tech-sub-container {
+    min-height: 3rem;
+    min-width: 15rem;
     padding: 1rem .5rem 1rem .5rem;
+    margin: 0 auto;
+    flex: 1;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-.frontend-container{
-    height: 100%;
-    font-family: Righteous;
-    flex-flow: column;
-    border:2px black solid;
-}
-.api-container{
+
+.frontend-container {
+    min-height: 20rem;
+    padding: .5rem;
     font-family: Righteous;
     flex-flow: column;
     border: 2px black solid;
 }
-.backend-container {
+
+.api-container {
+    min-height: 20rem;
+    padding: .5rem;
     font-family: Righteous;
     flex-flow: column;
-    border:2px black solid;
+    border: 2px black solid;
 }
-.about-icon{
-    min-width: 2rem;
-    min-height: 2rem;
-   padding: .2rem;
+
+.backend-container {
+    min-height: 20rem;
+    padding: .5rem;
+    font-family: Righteous;
+    flex-flow: column;
+    border: 2px black solid;
 }
-.beekeeper{
-    color:black;
-    width: 1rem;
-    min-height: 2rem;
+
+.about-icon-main {
+    max-width: 4rem;
+    min-height: 4rem;
+    padding: .5rem;
+}
+
+.about-icon {
+    max-width: 2.5rem;
+    min-height: 2.5rem;
+    padding: .2rem;
+}
+
+.about-icon-manual {
+    max-width: 2.5rem;
+    min-height: 2.5rem;
     padding: .2rem;
 }
