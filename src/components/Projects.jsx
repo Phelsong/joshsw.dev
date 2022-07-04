@@ -20,6 +20,11 @@ function Projects() {
           Contributions:
           <br />
           I designed the database structure and built out the core cart functionality.
+          <br />
+          <br />
+          Stack:
+          <br />
+          React | Express | Node | Flask | Postgres
         </span>
         <Link
           to={`//bluebox-atnight.herokuapp.com/`}
@@ -49,7 +54,11 @@ function Projects() {
           Goal:
           <br />
           Data Simulation App
-          
+          <br />
+          <br />
+          Stack:
+          <br />
+          React | Electron | FastAPI
         </span>
         <Link
           to={`//github.com/Phelsong/project-ynix`}

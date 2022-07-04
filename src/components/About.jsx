@@ -27,7 +27,9 @@ function About() {
       <div className="bio">
       <img src={require("../Assets/headshot-small.jpg")} alt="heashot" className="headshot" />
       <p className="about-paragraph">
-        I spent of the 10years of my career journey as a Directory of Photography, but moved into the Development world in 2022. I love building beautiful solutions to complex problems and creating things that have never been seen before. I'm inspired by automation and anything new and interesting. I aspire to build projects that are well used and loved. Also, eventually working on virtual cinematography projects.
+        I spent of the first 10 years of my career journey as a Directory of Photography, but moved into the Development world in 2022. I love building beautiful solutions to complex problems and creating things that have never been seen before. 
+        <br />
+        I'm inspired by automation or anything new and interesting. I aspire to build projects that are well used and loved. Also, eventually working on virtual cinematography projects.
       </p>
       </div>
       <div className="languages-container">
