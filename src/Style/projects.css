@@ -2,3 +2,7 @@
     flex-flow: column;
     padding: 2rem;
 }
+.projects-img {
+    max-width: 60%;
+    height: 30%;
+}
