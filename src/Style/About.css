@@ -1,7 +1,4 @@
-@font-face {
-    font-family: Righteous;
-    src: url(../Assets/Righteous-Regular.ttf);
-}
+
 
 .about-container {
     width: 100%;
@@ -12,11 +9,12 @@
 
 .bio {
     flex-flow: row nowrap;
-    min-width: 80%;
+    min-width: 90%;
     height: 20rem;
     align-items: center;
     justify-content: center;
     flex:1;
+
 }
 
 .headshot {
@@ -43,6 +41,7 @@
     align-items: center;
     justify-content: center;
     flex-flow: column;
+
 }
 
 .about-title {

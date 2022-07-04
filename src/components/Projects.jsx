@@ -16,7 +16,15 @@ function Projects() {
           <br />
           Fullstack Developer
           <br />
-          ...I built out the cart...
+          <br />
+          Contributions:
+          <br />
+          I designed the database structure and built out the core cart functionality.
+          <br />
+          <br />
+          Stack:
+          <br />
+          React | Express | Node | Flask | Postgres
         </span>
         <Link
           to={`//bluebox-atnight.herokuapp.com/`}
@@ -30,13 +38,27 @@ function Projects() {
         />
       </div>
       <div className="projects-sub-container">
+      <img
+          src={require("../Assets/ProjectYnixV1.jpg")}
+          alt="project_ynix"
+          className="projects-img"
+        />
         <span className="projects-name">project_ynix</span>
         <span className="projects-description">
           Role:
           <br />
-          Fullstack Developer
+          Lead Developer
           <br />
           in Development
+          <br />
+          Goal:
+          <br />
+          Data Simulation App
+          <br />
+          <br />
+          Stack:
+          <br />
+          React | Electron | FastAPI
         </span>
         <Link
           to={`//github.com/Phelsong/project-ynix`}
@@ -50,11 +72,11 @@ function Projects() {
           alt="connect-four-splash"
           className="projects-img"
         />
-        <span className="projects-name">Connect Four</span>
+        <span className="projects-name">Connect-Four</span>
         <span className="projects-description">
           Role:
           <br />
-          Fullstack Developer
+          Lead Developer
           <br />
         </span>
         <Link

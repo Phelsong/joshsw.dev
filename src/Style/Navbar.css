@@ -1,5 +1,14 @@
-.nav-icon{
-    margin: .5rem;
-    
 
+.nav-icon{
+    height: 2rem;
+    min-width: 2rem;
+    margin: .5rem;
+    padding: .3rem;
+}
+.nav-icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.main-title {
+    font-family: Cantarell-Italic;
 }
