@@ -1,8 +1,41 @@
-.projects-container{
-    flex-flow: column;
-    padding: 2rem;
+.projects-container {
+    max-width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    margin:0 1rem 2rem 1rem;
+    flex-flow: column nowrap;
 }
+
+.projects-sub-container {
+    max-width: 80%;
+    height: 25rem;
+    flex:1;
+    padding: 2rem;
+    margin: 0 1rem 2rem 1rem;
+    background-color: rgba(143, 131, 131, 0.483);
+    box-shadow: .2px .2px 8px gray;
+}
+
 .projects-img {
-    max-width: 60%;
-    height: 30%;
+    min-width: 50%;
+    max-height: 90%;
+    box-shadow: .1px .1px 5px gray;
+}
+
+.projects-name {
+    width: 15rem;
+    padding: .5rem;
+    margin: 2rem;
+    font-family: Righteous;
+    font-size: 20px;
+    line-height: 2;
+    text-shadow: .1px .2px 1px rgb(0, 0, 0);
+}
+
+.projects-description {
+    width: 20rem;
+    flex-flow: column;
+    margin: 1rem;
+    padding: 1rem;
+    line-height: 2;
+    text-shadow: .1px .2px 1px rgb(0, 0, 0);
 }
