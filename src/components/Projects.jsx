@@ -85,7 +85,7 @@ function Projects() {
           uk-icon="link"
         />
         <Link
-          to={`//github.com/github.com/Phelsong/Arcade-Connect-4`}
+          to={`//github.com/Phelsong/Arcade-Connect-4`}
           target="_blank"
           uk-icon="github-alt"
         />
