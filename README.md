@@ -1,5 +1,5 @@
 # joshsw-website
-`Joshsw.net`
+`www.joshsw.dev`
 
 ## Stack
 
