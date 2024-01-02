@@ -3,5 +3,4 @@
 
 ## Stack
 
-`React 18`
-`UIKit`
+`pyscript`

@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "joshsw-dev"
+version = "0.1.0"
+description = "personal site"
+authors = ["josh wilkinson <joshswilkinson@outlook.com>"]
+license = "proprietary"
+readme = "README.md"
+packages = [{include = "joshsw"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
