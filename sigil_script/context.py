@@ -4,7 +4,7 @@ from sigil_script.components.div import Div
 
 
 class Site:
-    body: Div = Div(pydom["body"][0], id="main")
+    body: Div = Div(pydom["body"][0], id="root")
 
 
 site = Site()
