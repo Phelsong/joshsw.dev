@@ -1,6 +1,7 @@
 """This file contains global site context variables"""
-from pyweb.pydom import pydom
-from senza.components.div import Div
+
+from pyweb import pydom
+from senza.components import Div
 
 
 class Site:

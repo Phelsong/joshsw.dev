@@ -1,9 +1,7 @@
-import json
-
 from pyodide.http import pyfetch
 
 # base_url: str = "http://[::1]:8000"
-base_url: str = "http://127.0.0.1:8000"
+base_url: str = "https://local.dev:8062"
 
 
 # ----------------------------------------------------------------
@@ -31,6 +29,14 @@ async def send_data(data: dict):
 
 
 # ----------------------------------------------------------------
+async def get_data_txt(extension: str):
+    try:
+        response: str = await pyfetch(extension)
+        result: dict = await response.text()
+        return result
+    except Exception as e:
+        result: dict = {"error": str(e)}
+        return result
 
 
 # ----------------------------------------------------------------

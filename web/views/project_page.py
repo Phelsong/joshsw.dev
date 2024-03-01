@@ -1,4 +1,4 @@
-from sigil_script.components.div import Div
+from senza.components import Div
 
 
 async def project_page(parent):

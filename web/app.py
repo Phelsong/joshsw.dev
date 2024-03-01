@@ -3,16 +3,21 @@
 from asyncio import ensure_future
 
 # imports
+
 from senza.dom_router import dom_router
-from web.views.test_page import test_page
+from web.views.about_page import about_page
+
+# from web.views.project_page import project_page
+# from web.views.dp_life_page import
 
 
 # =======================
 async def main() -> None:
+    from web.context import site
+
     # ==================================
-    await dom_router.add_route(test_page, "/test")
-    dom_router.get_routes()
-    await dom_router.nav("/test")
+    await dom_router.add_route(about_page, "/about")
+    await dom_router.nav("/about")
     # ==================================
 
 

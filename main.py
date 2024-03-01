@@ -7,8 +7,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 # imports
-from routers.gallery import gallery
-from routers.site import pages
+from routers.nav import nav
 
 
 # =============================================================================
@@ -59,13 +58,24 @@ app.add_middleware(
 
 # ---------------------------------------------------------
 
-app.mount(path="/static", app=StaticFiles(directory="public"), name="public")
+app.mount(path="/public", app=StaticFiles(directory="public"), name="public")
+app.mount(
+    path="/senza",
+    app=StaticFiles(directory="senza"),
+    name="senza",
+)
 app.mount(
     path="/web",
     app=StaticFiles(directory="web"),
     name="web",
 )
-
+app.mount(
+    path="/assets",
+    app=StaticFiles(directory="assets"),
+    name="assets",
+)
+# ---------------------------------------------------------
+app.include_router(nav)
 # ---------------------------------------------------------
 
 
@@ -76,7 +86,7 @@ def get_status() -> dict[str, str]:
 
 @app.get("/favicon.ico")
 def get_favicon() -> FileResponse:
-    return FileResponse(path="static/favicon.ico", status_code=200)
+    return FileResponse(path="public/favicon.ico", status_code=200)
 
 
 # ------------------------------------------------------------------------------

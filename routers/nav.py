@@ -17,7 +17,7 @@ from pydantic import BaseModel, HttpUrl, Strict, AnyHttpUrl
 
 # =============================================================================
 
-pages = APIRouter(
+nav = APIRouter(
     prefix="",
     tags=["site elements and redirects"],
     responses={404: {"description": "Not found"}},
@@ -28,7 +28,7 @@ SITE_ENV = os.environ["SITE_ENV"] if os.environ.get("SITE_ENV") else "developmen
 # =============================================================================
 
 
-@pages.get("/about", response_class=HTMLResponse)
+@nav.get("/about", response_class=HTMLResponse)
 async def dashboard() -> HTMLResponse:
     html = """
 <!DOCTYPE pyscript>
@@ -55,7 +55,7 @@ async def dashboard() -> HTMLResponse:
     <script
       type="py"
       src="/web/app.py"
-      config="web/config/config.toml"
+      config="/web/config/config.toml"
     ></script>
   </body>
 </html>
