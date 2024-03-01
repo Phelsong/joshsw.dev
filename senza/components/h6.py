@@ -1,9 +1,8 @@
 """base template"""
 from pyweb.pydom import Element
-from sigil_script.components.abase import Sigil
 
 
-class Button(Sigil):
+class H6(Element):
     """Base component builder for a HTML component.
     _type: str
     _class_list: set
@@ -13,5 +12,5 @@ class Button(Sigil):
     html: str
     """
 
-    _type = "button"
-    _class_list: set = {"button"}
+    _type = "h6"
+    _class_list: set = {"h6"}

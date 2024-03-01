@@ -1,11 +1,12 @@
 """base template"""
+
 # from stubs.pyscript import document
 # from stubs.pyweb.pydom import Element
 from pyscript import document
 from pyweb.pydom import Element
 
 
-class Sigil(Element):
+class Rest(Element):
     """Base component builder for a HTML component.
     _type: str
     _class_list: set
@@ -79,9 +80,9 @@ class Sigil(Element):
     def visible(self, val: bool) -> bool:
         """Set the visibility of the element."""
         if val is True:
-            self._js.style.visibility = "visible"
+            pydom[f"#{self.id}"][0].remove_class("senza-hidden")
         else:
-            self._js.style.visibility = "hidden"
+            pydom[f"#{self.id}"][0].add_class("senza-hidden")
         self._visible = val
 
     def __create__(self, class_list: set):

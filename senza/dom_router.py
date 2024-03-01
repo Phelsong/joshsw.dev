@@ -1,9 +1,10 @@
 """router"""
+
 # libs
 from pyweb.pydom import Element
 
 # imports
-from sigil_script.context import site
+from senza.context import site
 
 
 class DomRouter:
@@ -18,6 +19,7 @@ class DomRouter:
         self.routes.__delitem__(route)
 
     def get_routes(self) -> set[str]:
+        print(self.routes.keys())
         return self.routes.keys()
 
     async def nav(self, route: str) -> None:
