@@ -5,7 +5,7 @@ from senza.components import Div
 
 
 class Site:
-    body: Div = Div(pydom["body"][0], id="root")
+    body: Div = Div(pydom["body"][0], id="root", class_list={"root"})
 
 
 site = Site()
