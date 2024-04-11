@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "joshsw-dev"
+version = "0.1.0"
+description = "personal site"
+authors = ["josh wilkinson <joshswilkinson@outlook.com>"]
+license = "proprietary"
+readme = "README.md"
+packages = [{ include = "routers" }, { include = "senza" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.0"
+uvicorn = "^0.27.1"
+orjson = "^3.9.15"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = 'main:server.run'
