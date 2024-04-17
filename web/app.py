@@ -1,6 +1,7 @@
 #!pyscript
 # libs
 from asyncio import ensure_future
+
 # imports
 
 from senza.dom_router import dom_router
@@ -15,8 +16,8 @@ from web.context import site
 async def main() -> None:
 
     # ==================================
-    await dom_router.add_route(about_page, "/about")
-    await dom_router.nav("/about")
+    await dom_router.add_route(about_page, "/")
+    await dom_router.nav("/")
 
 
 # ==================================

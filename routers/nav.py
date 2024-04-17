@@ -28,7 +28,7 @@ SITE_ENV = os.environ["SITE_ENV"] if os.environ.get("SITE_ENV") else "developmen
 # =============================================================================
 
 
-@nav.get("/about", response_class=HTMLResponse)
+@nav.get("/", response_class=HTMLResponse)
 async def dashboard() -> HTMLResponse:
     html = """
 <!DOCTYPE pyscript>

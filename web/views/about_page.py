@@ -28,10 +28,6 @@ async def about_page(parent):
         "beekeeper-svg",
         svg_image=await get_data_txt("assets/icons/BeekeeperLogo.svg"),
     )
-    SVG(
-        about_container,
-        "python-logo",
-        svg_image=await get_data_txt("assets/icons/fa-python.svg"),
-    )
-
+    
+    
     return about_container
