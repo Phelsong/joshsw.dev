@@ -1,3 +1,3 @@
-[submodule "Senza"]
-	path = Senza
-	url = https://github.com/Phelsong/Senza.git
+[submodule "senza"]
+	path = senza
+	url = https://github.com/Phelsong/senza.git

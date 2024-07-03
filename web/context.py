@@ -1,11 +1,18 @@
 """This file contains global site context variables"""
+import os
+from pyscript import py_import
+from pyscript.web import dom
 
-from pyweb import pydom
-from senza.components import Div
-
+from senza.components.div import Div
 
 class Site:
-    body: Div = Div(pydom["body"][0], id="root", class_list={"root"})
+    body: Div = Div(dom["body"][0], id="root", class_list={"root"})
+    base_url:str
 
 
 site = Site()
+
+if os.getenv("SITE_ENV") == "PROD":
+    site.base_url = ""
+else:
+    site.base_url = "https://dev.local:8062"

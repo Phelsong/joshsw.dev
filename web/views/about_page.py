@@ -1,5 +1,8 @@
 from senza.components import Div, Img, SVG, P
+
+from web.vars.svg_list import svg_list
 from web.queries import get_data_txt
+
 
 
 async def about_page(parent):
@@ -23,11 +26,17 @@ async def about_page(parent):
     cinematography projects.
         """,
     )
-    SVG(
-        about_container,
-        "beekeeper-svg",
-        svg_image=await get_data_txt("assets/icons/BeekeeperLogo.svg"),
-    )
-    
+    for item in svg_list:
+        data = await get_data_txt(f"assets/icons/{item}.svg")
+        await tech_ico(about_container, item, data)
     
     return about_container
+
+# ----------------------
+async def tech_ico(container, id:str ,svg_data:str):
+    SVG(
+        container,
+        id,
+        svg_image=svg_data
+    )
+

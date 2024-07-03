@@ -1,0 +1,15 @@
+svg_list: list = [
+    "BeekeeperLogo",
+    "bootstrap",
+    "docker",
+    "fa-python",
+    "fa-react",
+    "fa-sass",
+    "fastapi-svg",
+    "io-js",
+    "postgres",
+    "postman",
+    "pyscript-sticker-black",
+    "si-pwsh",
+    "ui-kit",
+]

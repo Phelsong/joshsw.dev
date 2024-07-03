@@ -4,7 +4,7 @@
 from typing import Callable
 
 # libs
-from pyweb.pydom import Element
+from pyscript.web.elements import Element
 
 # imports
 from web.context import site
@@ -12,22 +12,31 @@ from web.context import site
 
 class DomRouter:
     def __init__(self, root: Element) -> None:
-        self.routes: dict = {}
         self.root: Element = root
+        self._nav: dict[str, Callable] = {}
+        self._routes: set[str] = set()
 
-    async def add_route(self, func: Callable, route: str) -> None:
-        self.routes[route] = func
+    @property
+    async def routes(self) -> set[str]:
+        return self._routes
 
-    def remove_route(self, route: str) -> None:
-        self.routes.__delitem__(route)
+    async def add(self, func: Callable, route: str = "{/func.__name__}") -> None:
+        #
+        if route == "{/func.__name__}":
+            route = f"/{func.__name__}"
+        if route[0] != "/":
+            route = f"/{route}"
+        #
+        self._routes.add(route)
+        self._nav[route] = func
 
-    def get_routes(self) -> set[str]:
-        print(self.routes.keys())
-        return set(self.routes.keys())
+    async def remove(self, route: str) -> None:
+        self._routes.remove(route)
+        del self._nav[route]
 
     async def nav(self, route: str) -> None:
         site.body.html = ""
-        await dom_router.routes[route](self.root)
+        await self._nav[route](self.root)
 
 
 dom_router = DomRouter(site.body)

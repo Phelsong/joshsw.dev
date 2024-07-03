@@ -1,6 +1,6 @@
 # libs
 import os
-from uvicorn import Server as UV_Server, Config as UV_Config
+from uvicorn import Server as uv_server, Config as uv_config
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -11,37 +11,22 @@ from routers.nav import nav
 
 
 # =============================================================================
-server_config: UV_Config
 # print(os.environ.get("SITE_ENV"))
+server_config: uv_config = uv_config(
+    app="main:app", host="0.0.0.0", port=8062, root_path=".", workers=8
+)
 
 if os.environ.get("SITE_ENV") == "PRODUCTION":
-    server_config = UV_Config(
-        app="main:app",
-        host="0.0.0.0",
-        port=8062,
-        root_path=".",
-        workers=5,
-        log_level="info",
-        forwarded_allow_ips="*",
-    )
+    server_config.headers.append(("Cache-Control", "must-revalidate"))
 else:
-    server_config = UV_Config(
-        app="main:app",
-        host="0.0.0.0",
-        port=8062,
-        root_path=".",
-        log_level="info",
-        workers=5,
-        ssl_certfile="./certs/dev-cert.pem",
-        ssl_keyfile="./certs/dev-key.pem",
-    )
+    server_config.log_level = "debug"
+    server_config.ssl_certfile = "./certs/dev-cert.pem"
+    server_config.ssl_keyfile = "./certs/dev-key.pem"
+    server_config.headers.append(("Cache-Control", "must-revalidate"))
 
+server: uv_server = uv_server(server_config)
 
-# print(server_config.__dict__)
-
-server: UV_Server = UV_Server(server_config)
-
-
+# -------------------------------------
 app = FastAPI(root_path=".")
 origins: list[str] = [
     "http://localhost",

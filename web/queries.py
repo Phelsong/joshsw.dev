@@ -1,18 +1,14 @@
-from pyodide.http import pyfetch
-
-# base_url: str = "http://[::1]:8000"
-base_url: str = "https://local.dev:8062"
+from pyscript import fetch
+from web.context import site
 
 
 # ----------------------------------------------------------------
 async def query_ex(url: str) -> dict:
     try:
-        response: str = await pyfetch(url)
-        result: dict = await response.json()
-        return result
+        resp: str = await fetch(url).json()
+        return resp
     except Exception as e:
-        result: dict = {"error": str(e)}
-        return result
+        return {"error": str(e)}
 
 
 # ----------------------------------------------------------------
@@ -31,12 +27,10 @@ async def send_data(data: dict):
 # ----------------------------------------------------------------
 async def get_data_txt(extension: str):
     try:
-        response: str = await pyfetch(extension)
-        result: dict = await response.text()
-        return result
+        resp: str = await fetch(extension).text()
+        return resp
     except Exception as e:
-        result: dict = {"error": str(e)}
-        return result
+        return {"error": str(e)}
 
 
 # ----------------------------------------------------------------
