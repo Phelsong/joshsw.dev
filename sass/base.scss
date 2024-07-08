@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  width: 100vw;
+  height: 100hv;
+  margin: 0;
+  & * {
+    display: flex;
+  }
+}
