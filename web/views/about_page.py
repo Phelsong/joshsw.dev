@@ -40,17 +40,19 @@ async def about_page(parent):
 
 # ----------------------
 async def tech_ico(container, id: str ,svg_data: str):
-    Label(container, f"{id}-label", inner_text=id)
+    Label(container, f"{id}-label", class_list={"tech-ico-label"}, inner_text=id)
     SVG(
         container,
         id,
+        class_list={"tech-ico"},
         svg_image=svg_data
     )
 
 async def tech_ico_img(container, id: str , img_data: str):
-    Label(container, f"{id}-label", inner_text=id)
+    Label(container, f"{id}-label", class_list={"tech-ico-label"}, inner_text=id)
     Img(
         container,
         id,
+        class_list={"tech-ico"},
         src=img_data
     )

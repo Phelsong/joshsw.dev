@@ -1,12 +1,3 @@
 @import "base.scss";
 @import "../senza/sass/senza";
-
-#about_page {
-    flex-flow: column nowrap;
-    border-box: content-box;
-}
-
-.svg-container {
-    width: 10rem;
-    height: 10rem;
-}
+@import "about_page.scss";

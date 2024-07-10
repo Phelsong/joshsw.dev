@@ -1,0 +1,18 @@
+#about_page {
+    flex-flow: column nowrap;
+    border-box: content-box;
+}
+
+#profile-pic {
+    max-width: 30%;
+}
+
+.tech-ico {
+    max-width: 10rem;
+    max-height: 10rem;
+}
+
+.tech-ico-label {
+    max-width: 10rem;
+    max-height: 2rem;
+}

@@ -24,5 +24,4 @@ async def main() -> None:
 # ==================================
 
 
-# ensure_future(main())
-await main()
+ensure_future(main())
