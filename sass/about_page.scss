@@ -3,13 +3,33 @@
     border-box: content-box;
 }
 
+#bio_row {
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 3rem 0 1rem;
+}
+
 #profile-pic {
     max-width: 30%;
 }
 
+#bio {
+    max-width: 40%;
+}
+
+#stack-container {
+    flex-flow: row nowrap;
+}
+
+.ico-container {
+    flex-flow: column wrap;
+}
+
 .tech-ico {
-    max-width: 10rem;
-    max-height: 10rem;
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
 }
 
 .tech-ico-label {

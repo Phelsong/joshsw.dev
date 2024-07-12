@@ -13,7 +13,7 @@ from routers.nav import nav
 # =============================================================================
 # print(os.environ.get("SITE_ENV"))
 server_config: uv_config = uv_config(
-    app="main:app", host="0.0.0.0", port=8062, root_path=".", workers=8
+    app="main:app", host="0.0.0.0", port=8062, root_path=".", reload=True
 )
 
 if os.environ.get("SITE_ENV") == "PRODUCTION":

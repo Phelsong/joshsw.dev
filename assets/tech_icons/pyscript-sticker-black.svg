@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2057" height="974">
+<svg stroke="currentColor" stroke-width="0" role="img" viewBox="24 24 24 24"
+    class="about-icon" height="2em" width="2em"  xmlns="http://www.w3.org/2000/svg">
     <path style="fill:#2C2E34; stroke:none;" d="M0 0L0 974L2057 974L2057 0L0 0z"/>
     <path style="fill:#432a01; stroke:none;" d="M824 230L825 231L824 230z"/>
     <path style="fill:#674201; stroke:none;" d="M825.667 230.333L826.333 230.667L825.667 230.333z"/>

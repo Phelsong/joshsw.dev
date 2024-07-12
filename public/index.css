@@ -1,16 +1,43 @@
+.senza-hidden {
+  display: none !important;
+}
+
 body {
   display: flex;
-  width: 100vw;
-  height: 100hv;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100hv;
   font-size: 18px;
   margin: 0;
 }
 body * {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.senza-hidden {
-  display: none !important;
+#root {
+  margin-top: 5rem;
+}
+
+#nav-dock {
+  position: fixed;
+  min-width: 35%;
+  max-width: 75%;
+  height: 3.5rem;
+  top: 0;
+  bottom: 85%;
+  left: 25%;
+  right: 25%;
+  border-radius: 0 0 1rem 1rem;
+  box-sizing: content-box;
+  background-color: black;
+}
+
+.dock-ico {
+  width: 4rem;
+  height: 2rem;
 }
 
 #about_page {
@@ -18,13 +45,33 @@ body * {
   border-box: content-box;
 }
 
+#bio_row {
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 3rem 0 1rem;
+}
+
 #profile-pic {
   max-width: 30%;
 }
 
+#bio {
+  max-width: 40%;
+}
+
+#stack-container {
+  flex-flow: row nowrap;
+}
+
+.ico-container {
+  flex-flow: column wrap;
+}
+
 .tech-ico {
-  max-width: 10rem;
-  max-height: 10rem;
+  width: 6rem;
+  height: 6rem;
+  padding: 1rem;
 }
 
 .tech-ico-label {

@@ -1,7 +1,7 @@
 from senza.components import Div, Img, SVG, P, Label
 
 from web.context import site
-from web.vars.static_assets import svg_logos, png_logos
+from web.vars.static_assets import lang_logos, tool_logos, framework_logos
 from web.queries import get_data_txt
 
 
@@ -10,14 +10,16 @@ async def about_page(parent):
     """about"""
 
     about_container = Div(parent, "about_page")
+
+    bio_row = Div(about_container, "bio_row")
     profile_pic = Img(
-        about_container, "profile-pic", src="assets/imgs/headshot-small.jpg"
+        bio_row, "profile-pic", src="assets/imgs/headshot-small.jpg"
     )
     bio = P(
-        about_container,
+        bio_row,
         "bio",
-        inner_text="""d
-    I spent of the first 10 years of my career journey as a Directory of
+        inner_text="""
+    I spent the first 10 years of my career journey as a Director of
     Photography, but moved into the Development world in 2022. I love building
     beautiful solutions to complex problems and creating things that have never
     been seen before.
@@ -27,13 +29,28 @@ async def about_page(parent):
     cinematography projects.
         """,
     )
-    for key,val in svg_logos.items():
-        data:str = await get_data_txt(f"{site.base_url}/assets/tech_icons/{val}.svg")
-        await tech_ico(about_container, key, data)
 
-    for key,val in png_logos.items():
-        data:str = await get_data_txt(f"{site.base_url}/assets/png_icons/{val}.png")
-        await tech_ico_img(about_container, key, data)
+    stack_container = Div(about_container, "stack-container")
+
+    lang_ico_container = Div(stack_container, "lang-ico-container", class_list={"ico-container"})
+    for key,val in lang_logos.items():
+        data:str = await get_data_txt(f"{site.base_url}/assets/tech_icons/{val}.svg")
+        await tech_ico(lang_ico_container, key, data)
+
+    framework_ico_container = Div(stack_container, "framework-ico-container", class_list={"ico-container"})
+    for key,val in framework_logos.items():
+        data:str = await get_data_txt(f"{site.base_url}/assets/tech_icons/{val}.svg")
+        await tech_ico(framework_ico_container, key, data)
+
+    tool_ico_container = Div(stack_container, "tool-ico-container", class_list={"ico-container"})
+    for key,val in tool_logos.items():
+        data:str = await get_data_txt(f"{site.base_url}/assets/tech_icons/{val}.svg")
+        await tech_ico(tool_ico_container, key, data)
+
+
+    # for key,val in png_logos.items():
+    #     data:str = await get_data_txt(f"{site.base_url}/assets/png_icons/{val}.png")
+    #     await tech_ico_img(logo_container, key, data)
 
 
     return about_container

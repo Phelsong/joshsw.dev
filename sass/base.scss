@@ -1,10 +1,18 @@
 body {
     display: flex;
-    width: 100vw;
-    height: 100hv;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100hv;
     font-size: 18px;
     margin: 0;
     & * {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
+}
+
+#root {
+    margin-top: 5rem;
 }

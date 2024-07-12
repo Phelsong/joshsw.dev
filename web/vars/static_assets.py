@@ -1,21 +1,23 @@
-svg_logos: dict[str, str] = {
-    "Beekeeper":"BeekeeperLogo",
-    "Bootstrap":"bootstrap",
-    "Docker":"docker",
+lang_logos: dict[str, str] = {
     "Python":"fa-python",
-    "React":"fa-react",
+    "Mojo" : "fa-fire",
     "Sass":"fa-sass",
     "JavaScript":"io-js",
-    "Postgres":"postgres",
-    "Postman":"postman",
-    "Pyscript":"pyscript-sticker-black",
+    "Pyscript":"pyscript_logo",
     "PowerShell":"si-pwsh",
+    }
+
+framework_logos: dict[str, str] = {
+    "React":"fa-react",
     "UiKit":"ui-kit",
+    "Kivy" : "kivy-1",
+    "Fast-Api": "fastapi",
+    "Bootstrap":"bootstrap",
 }
 
-png_logos: dict = {
-    "Kivy": "logo-kivy-black",
-    "Fast-Api": "fastapi",
-    "Pyscript": "pyscript-sticker-black",
-    "Beekeeper": "BeekeeperLogopng-black"
-}
+tool_logos: dict = {
+    "Beekeeper":"BeekeeperLogo",
+    "Docker":"docker",
+    "Postgres":"postgres",
+    "Postman":"postman",
+    }
