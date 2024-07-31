@@ -9,7 +9,6 @@ from fastapi.responses import FileResponse
 # imports
 from routers.nav import nav
 
-
 # =============================================================================
 # print(os.environ.get("SITE_ENV"))
 server_config: uv_config = uv_config(
@@ -28,12 +27,7 @@ server: uv_server = uv_server(server_config)
 
 # -------------------------------------
 app = FastAPI(root_path=".")
-origins: list[str] = [
-    "http://localhost",
-    "http://127.0.0.1",
-    "http://[::]",
-    "*"
-]
+origins: list[str] = ["http://localhost", "http://127.0.0.1", "http://[::]", "*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
