@@ -1,4 +1,4 @@
-packages = ["orjson"]
+packages = ["orjson", "async_lru"]
 version = "0.1.3"
 #interpreter = "/packages/pyodide/0.26.0/full/pyodide/pyodide.mjs"
 interpreter = "https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.mjs"

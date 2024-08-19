@@ -12,6 +12,7 @@ python = "^3.11"
 fastapi = "^0.110.0"
 uvicorn = "^0.27.1"
 orjson = "^3.9.15"
+async-lru = "^2.0.4"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.1"
@@ -26,5 +27,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 start = 'main:server.run'
-compile_sass = 'utils.compile_sass:compile_sass'
-
+compile_sass = 'scripts.compile_sass:compile_sass'

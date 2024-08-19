@@ -38,13 +38,13 @@ async def dashboard() -> HTMLResponse:
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ================================================================================== -->
-    <link async defer 
+    <link async defer
       rel="stylesheet"
-      href="https://pyscript.net/releases/2024.6.2/core.css"
+      href="https://pyscript.net/releases/2024.8.2/core.css"
     />
-    <script async 
+    <script async
       type="module"
-      src="https://pyscript.net/releases/2024.6.2/core.js"
+      src="https://pyscript.net/releases/2024.8.2/core.js"
     ></script>
     <link async defer rel="stylesheet" href="/public/index.css" />
     <!-- ================================================================================== -->
