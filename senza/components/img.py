@@ -1,7 +1,6 @@
 """base template"""
 
-from pyscript.web.elements import Element
-from senza.components import Rest
+from senza.components import Rest, Element
 
 
 class Img(Rest):

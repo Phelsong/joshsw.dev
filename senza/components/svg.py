@@ -1,6 +1,5 @@
 from pyscript import document
-from pyscript.web.elements import Element
-from senza.components import Rest
+from senza.components import Rest, Element
 
 
 class SVG(Rest):

@@ -15,7 +15,7 @@ from web.elements.dock import create_dock
 
 # =======================
 async def main() -> None:
-    await create_dock()
+    # await create_dock()
     # ==================================
     await dom_router.add(about_page, "/")
     await dom_router.add(project_page, "projects")

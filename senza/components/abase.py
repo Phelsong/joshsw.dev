@@ -3,11 +3,10 @@
 # from stubs.pyscript import document
 # from stubs.pyweb.pydom import Element
 from pyscript import document
-from pyscript.web import dom
-from pyscript.web.elements import Element
+from pyscript.web import Element, ContainerElement
 
 
-class Rest(Element):
+class Rest(ContainerElement):
     """Base component builder for a HTML component.
     _type: str
     _class_list: set
@@ -61,8 +60,8 @@ class Rest(Element):
 
         self._parent: Element = parent
         self._js = document.createElement(self._type)
-        self.id = id
-        self.html = inner_text
+        self.__id = id
+        self._innerHtml = inner_text
         # -------------------
         # create element
         # ---
@@ -79,16 +78,20 @@ class Rest(Element):
         return self._visible
 
     @visible.setter
-    def visible(self, val: bool) -> bool:
+    def visible(self, val: bool) -> None:
         """Set the visibility of the element."""
         if val is True:
-            dom[f"#{self.id}"][0].remove_class("senza-hidden")
+            page[f"#{self.id}"][0].remove_class("senza-hidden")
         else:
-            dom[f"#{self.id}"][0].add_class("senza-hidden")
+            page[f"#{self.id}"][0].add_class("senza-hidden")
         self._visible = val
 
     def __create__(self, class_list: set):
-        self._parent.append(self)
-        cl = self._class_list.union(class_list)
-        for x in cl:
-            self.add_class(x)
+        try:
+            self._parent.append(self._js)
+            cl = self._class_list.union(class_list)
+            assert len(cl) > 0
+            for x in cl:
+                self.classes.add(x)
+        except AssertionError:
+            return
