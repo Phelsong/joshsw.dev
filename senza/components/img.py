@@ -57,4 +57,4 @@ class Img(Rest):
         super().__init__(
             parent, id, class_list=class_list, inner_text=inner_text, visible=visible
         )
-        self._js.setAttribute("src", src)
+        self.setAttribute("src", src)

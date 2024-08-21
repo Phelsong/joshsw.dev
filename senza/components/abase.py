@@ -6,7 +6,7 @@ from pyscript import document
 from pyscript.web import Element, ContainerElement
 
 
-class Rest(ContainerElement):
+class Rest(Element):
     """Base component builder for a HTML component.
     _type: str
     _class_list: set
@@ -57,11 +57,11 @@ class Rest(ContainerElement):
         content
         when
         """
-
+        super().__init__()
         self._parent: Element = parent
         self._js = document.createElement(self._type)
-        self.__id = id
-        self._innerHtml = inner_text
+        self.id = id
+        self.innerText = inner_text
         # -------------------
         # create element
         # ---
@@ -88,7 +88,7 @@ class Rest(ContainerElement):
 
     def __create__(self, class_list: set):
         try:
-            self._parent.append(self._js)
+            self._parent.append(self)
             cl = self._class_list.union(class_list)
             assert len(cl) > 0
             for x in cl:

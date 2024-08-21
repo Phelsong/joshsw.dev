@@ -22,4 +22,4 @@ class SVG(Rest):
         svg_image: str = "",
     ):
         super().__init__(parent, id, class_list=class_list)
-        self.html = f"{svg_image}"
+        self.innerHTML = f"{svg_image}"
