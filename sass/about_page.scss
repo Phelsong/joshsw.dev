@@ -1,6 +1,7 @@
 #about_page {
     flex-flow: column nowrap;
     border-box: content-box;
+    padding-bottom: 3rem;
 }
 
 #bio_row {
@@ -20,19 +21,30 @@
 
 #stack-container {
     flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.group-ico-container {
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    max-width: 30%;
+    padding: 0rem 1rem 0rem 1rem;
 }
 
 .ico-container {
-    flex-flow: column wrap;
+    flex-direction: column;
+    padding: 0.3rem;
 }
 
 .tech-ico {
-    width: 6rem;
-    height: 6rem;
-    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.4rem;
 }
 
 .tech-ico-label {
     max-width: 10rem;
     max-height: 2rem;
+    font-size: 0.8rem;
 }

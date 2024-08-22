@@ -1,15 +1,16 @@
 #nav-dock {
     position: fixed;
-    min-width: 35%;
+    min-width: 25%;
     max-width: 75%;
     height: 3.5rem;
-    top: 0;
-    bottom: 85%;
+    top: 94vh;
+    bottom: 0vh;
     left: 25%;
     right: 25%;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem 1rem 0rem 0rem;
     box-sizing: content-box;
-    background-color: black;
+    background-color: #2e3440;
+    padding: 0 0 1rem 0;
 }
 
 .dock-ico {
