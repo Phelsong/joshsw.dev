@@ -18,3 +18,38 @@ body {
 #root {
     padding-bottom: 4rem;
 }
+
+py-terminal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    style {
+        display: none;
+    }
+    & * {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    & .xterm {
+        position: absolute;
+        flex-flow: column nowrap;
+        width: 90vw;
+        height: 30vh;
+    }
+    & .xterm-viewport {
+        position: relative;
+    }
+    & .xterm-screen {
+        position: relative;
+        width: 100% !important;
+    }
+    & .xterm-rows {
+        width: 100%;
+    }
+    & .xterm-rows div {
+        width: 100% !important;
+    }
+    & .xterm-rows div span {
+        width: 100% !important;
+    }
+}

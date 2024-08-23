@@ -17,8 +17,9 @@ class DockButton(Rest):
         parent: Element,
         id: str = "",
         icon: str = "",
+        tooltip_text: str = "",
         *,
         class_list: set = set(),
     ):
         super().__init__(parent, id, class_list=class_list)
-        self.innerHTML = f"{icon}"
+        self.innerHTML = f"{icon}<span class='dock-tooltip'>{tooltip_text}</span>"

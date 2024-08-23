@@ -48,10 +48,12 @@ async def dashboard() -> HTMLResponse:
     ></script>
     <link async defer rel="stylesheet" href="/public/index.css" />
     <!-- ================================================================================== -->
-    <title>BASE</title>
+    <title>joshsw.dev</title>
   </head>
   <body>
     <!-- ==================================================== -->
+    <script async defer type="mpy" src="web/repl.py" terminal worker></script>
+    
     <script async type="py" src="/web/app.py" config="/web/pyscript.toml"></script>
   </body>
 </html>

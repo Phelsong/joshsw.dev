@@ -7,9 +7,9 @@ async def repl_page(parent):
         parent,
         "repl-page-container",
     )
-    # repl_container.innerHTML = """
-    # <script async type='py' terminal worker>
-    # import code
-    # code.interact()
-    # </script>"""
-    # return repl_container
+    repl_container.innerHTML = """
+    <script async type='py' terminal worker>
+    import code
+    code.interact()
+    </script>"""
+    return repl_container
