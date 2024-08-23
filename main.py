@@ -24,7 +24,6 @@ else:
     server_config.headers.append(("Cache-Control", "must-revalidate"))
 
 server: uv_server = uv_server(server_config)
-
 # -------------------------------------
 app = FastAPI(root_path=".")
 origins: list[str] = ["http://localhost", "http://127.0.0.1", "http://[::]", "*"]

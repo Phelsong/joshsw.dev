@@ -20,7 +20,7 @@ body * {
 }
 
 #root {
-  margin-top: 5rem;
+  padding-bottom: 4rem;
 }
 
 #nav-dock {
@@ -46,7 +46,6 @@ body * {
 #about_page {
   flex-flow: column nowrap;
   border-box: content-box;
-  padding-bottom: 3rem;
 }
 
 #bio_row {
@@ -57,7 +56,9 @@ body * {
 }
 
 #profile-pic {
+  max-height: 30rem;
   max-width: 30%;
+  border-radius: 1rem;
 }
 
 #bio {

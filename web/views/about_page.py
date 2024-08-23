@@ -23,11 +23,11 @@ async def about_page(parent):
     I'm inspired by automation and imaging, especially virtual cinematography related, but also anything new and interesting. I aspire to build
     projects that are well used and loved.
 
-    I develop on Arch btw... but I've developed/deployed for Windows, Ubuntu, Rhel, etc... I maintain a "personal datacenter" for hosting, testing, and deploying my own services. This including working with: 
-        
+    I develop on Arch btw... but I've developed/deployed for Windows, Ubuntu, Rhel, etc... I maintain a "personal datacenter" for hosting, testing, and deploying my own services. This including working with:
+
         - Docker
         - Kubernetes
-        - CI/CD 
+        - CI/CD
         - NFS
         - SMB/Samba
         - ZFS
@@ -80,6 +80,7 @@ async def tech_ico(container, id: str, svg_data: str):
     Label(x_container, f"{id}-label", class_list={"tech-ico-label"}, inner_text=id)
 
 
+# ----------------------
 async def tech_ico_img(container, id: str, img_data: str):
     x_container = Div(container, f"{id}-container", class_list={"ico-container"})
     Img(x_container, id, class_list={"tech-ico"}, src=img_data)
