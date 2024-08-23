@@ -26,7 +26,7 @@ body * {
 #nav-dock {
   position: fixed;
   min-width: 25%;
-  max-width: 75%;
+  max-width: 65%;
   height: 3.5rem;
   top: 94vh;
   bottom: 0vh;
@@ -39,8 +39,16 @@ body * {
 }
 
 .dock-ico {
-  width: 4rem;
-  height: 2rem;
+  box-sizing: border-box;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: 0 0.2rem 0 0.2rem;
+  border-radius: 0.3rem;
+  z-index: 300;
+  background-color: #4c566a;
+}
+.dock-ico:hover {
+  box-shadow: 2px 1px 6px black;
 }
 
 #about_page {
@@ -93,6 +101,20 @@ body * {
   max-width: 10rem;
   max-height: 2rem;
   font-size: 0.8rem;
+}
+
+#project-page-container {
+  width: 100%;
+  min-height: 90%;
+  flex-flow: column;
+}
+
+#senza-project-container {
+  flex-flow: column nowrap;
+}
+
+#micro_cam-project-container {
+  flex-flow: column nowrap;
 }
 
 /*# sourceMappingURL=index.css.map */

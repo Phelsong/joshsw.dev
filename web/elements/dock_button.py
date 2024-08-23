@@ -1,8 +1,7 @@
-from pyscript import document
 from senza.components import Rest, Element
 
 
-class SVG(Rest):
+class DockButton(Rest):
     """Base component builder for an HTML button component.
     __Contains__
     id
@@ -11,15 +10,15 @@ class SVG(Rest):
     """
 
     _type = "div"
-    _class_list: set = {"svg-container"}
+    _class_list: set = {"dock-ico"}
 
     def __init__(
         self,
         parent: Element,
         id: str = "",
+        icon: str = "",
         *,
         class_list: set = set(),
-        svg_image: str = "",
     ):
         super().__init__(parent, id, class_list=class_list)
-        self.innerHTML = f"{svg_image}"
+        self.innerHTML = f"{icon}"

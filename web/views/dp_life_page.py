@@ -5,6 +5,6 @@ async def dp_life_page():
     """about"""
     from web.context import site
 
-    dp_life_container = Div(site.body, inner_text="hello")
+    dp_life_container = Div(site.body, "dp-container" inner_text="hello")
 
     return dp_life_container

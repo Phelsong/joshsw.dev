@@ -1,11 +1,13 @@
-#project-page-container{
+#project-page-container {
+    width: 100%;
+    min-height: 90%;
     flex-flow: column;
 }
 
-#senza-project-container{
-    margin:0;
+#senza-project-container {
+    flex-flow: column nowrap;
 }
 
-#micro_cam-project-container{
-    margin: 0;
+#micro_cam-project-container {
+    flex-flow: column nowrap;
 }
