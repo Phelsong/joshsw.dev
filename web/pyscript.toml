@@ -29,7 +29,6 @@ files = [
     "senza/components/select.py",
     "senza/components/svg.py",
     "senza/components/span.py",
-    #    "senza/websocket.py",
     "senza/dom_router.py",
     "web/context.py",
     "web/elements/dock_button.py",
@@ -40,5 +39,4 @@ files = [
     "web/views/about_page.py",
     "web/views/dp_life_page.py",
     "web/views/project_page.py",
-    "web/views/repl_page.py",
 ]

@@ -52,10 +52,11 @@ async def dashboard() -> HTMLResponse:
   </head>
   <body>
     <!-- ==================================================== -->
-    <script async defer type="mpy" src="web/repl.py" terminal worker></script>
-    
     <script async type="py" src="/web/app.py" config="/web/pyscript.toml"></script>
   </body>
 </html>
 """
     return HTMLResponse(html, media_type="text/html", status_code=200)
+
+
+# <script async defer type="mpy" src="web/repl.py" terminal worker></script>
