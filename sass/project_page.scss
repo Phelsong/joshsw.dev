@@ -1,13 +1,29 @@
 #project-page-container {
     width: 100%;
     min-height: 90%;
-    flex-flow: column;
+    flex-flow: row wrap;
 }
 
 #senza-project-container {
     flex-flow: column nowrap;
+    padding: 1rem;
 }
 
-#micro_cam-project-container {
+#microcam-project-container {
     flex-flow: column nowrap;
+    padding: 1rem;
+}
+#bluebox-project-container {
+    flex-flow: column nowrap;
+    padding: 1rem;
+}
+
+#connect4-project-container {
+    flex-flow: column nowrap;
+    padding: 1rem;
+}
+
+.project-img {
+    max-width: 20%;
+    max-height: 20%;
 }

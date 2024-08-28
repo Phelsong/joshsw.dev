@@ -1,13 +1,11 @@
 #!pyscript
 # libs
 from asyncio import ensure_future
+from senza.dom_router import dom_router
 
 # imports
-
-from senza.dom_router import dom_router
 from web.elements.dock import create_dock
 from web.context import site
-
 from web.views.about_page import about_page
 from web.views.project_page import project_page
 
