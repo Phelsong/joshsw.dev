@@ -1,25 +1,35 @@
 lang_logos: dict[str, str] = {
-    "Python": "fa-python",
-    "Mojo": "fa-fire",
+    "Python": "fa_python",
+    "Mojo": "im_fire",
+    "Pyscript": "pyscript_logo",
     "Sass": "fa-sass",
     "JavaScript": "io-js",
-    "Pyscript": "pyscript_logo",
     "PowerShell": "si-pwsh",
 }
 
 framework_logos: dict[str, str] = {
-    "React": "fa-react",
-    "UiKit": "ui-kit",
-    "Kivy": "kivy-1",
     "Fast-Api": "fastapi",
-    "Bootstrap": "bootstrap",
     "Pandas": "py_pandas",
     "Numpy": "py_numpy",
+    "Kivy": "kivy-1",
+    "Pillow": "ai_outlinepython_pillow",
+    "Flask": "si_flask",
+    "React": "fa-react",
+    "UiKit": "ui-kit",
+    "Bootstrap": "bootstrap",
 }
 
 tool_logos: dict = {
-    "Beekeeper": "BeekeeperLogo",
-    "Docker": "docker",
+    "Linux": "di_linux",
     "Postgres": "postgres",
+    "Docker": "docker",
+    "Kubernetes": "si_kubernetes",
+    "Portainer": "si_portainer",
+    "Git": "di_git",
+    "Windows": "si_windows",
+    "TeamCity": "si_teamcity",
+    "Beekeeper": "BeekeeperLogo",
     "Postman": "postman",
+    "Video": "fa_video",
+    "Audio": "fa_audiod",
 }

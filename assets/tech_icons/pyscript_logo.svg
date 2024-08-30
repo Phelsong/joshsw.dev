@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 viewBox="250 250 500 450" height="2rem" width="2rem" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
 <g>
 </g>
 <g>
-	<path style="fill:#FDA703;" d="M416.151,431.362c12.666-12.662,33.45-21.405,50.232-11.476c3.688,2.182,7.129,4.945,10.003,8.127
+	<path style="fill:#00000;" d="M416.151,431.362c12.666-12.662,33.45-21.405,50.232-11.476c3.688,2.182,7.129,4.945,10.003,8.127
 		c8.862,9.811,11.575,23.477,11.636,36.322c0.122,25.607-9.136,54.778-33.746,67.169c-9.409,4.738-19.92,6.437-30.397,5.979
 		c-5.9-0.259-11.833-1.456-17.736-1.532l-0.553-0.004v45.337h-19.578V418.74h19.578v26.018h0.258
 		C407.987,439.799,412.378,435.134,416.151,431.362z M417.549,451.197c-1.667,1.929-3.224,3.928-4.748,5.968l-1.009,1.353

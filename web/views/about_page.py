@@ -37,51 +37,48 @@ async def about_page(parent):
         """,
     )
 
-    stack_container = Div(about_container, "stack-container")
-
-    # ---------
-    Label(stack_container, "lang-ico-container-title", inner_text="Languages")
-    lang_ico_container = Div(
-        stack_container, "lang-ico-container", class_list={"group-ico-container"}
+    Label(about_container, "skills-label", inner_text="Skills")
+    skills_container = Div(about_container, "skills-container")
+    # ::::::::-------
+    lang_ico_container_root = Div(
+        skills_container,
+        "lang-ico-container-root",
+        class_list={"group-ico-container-root"},
     )
-    for key, val in lang_logos.items():
-        data: str = await get_data_txt(f"{site.base_url}/assets/tech_icons/{val}.svg")
-        await tech_ico(lang_ico_container, key, data)
-    # ---------
-    Label(
-        stack_container, "lib-ico-container-title", inner_text="Frameworks & Libraries"
+    await tech_ico_group(lang_ico_container_root, "Languages", "lang", lang_logos)
+    # ::::::::-------
+    lib_ico_container_root = Div(
+        skills_container,
+        "lib-ico-container-root",
+        class_list={"group-ico-container-root"},
     )
-    framework_ico_container = Div(
-        stack_container, "framework-ico-container", class_list={"group-ico-container"}
+    await tech_ico_group(
+        lib_ico_container_root, "Libraries & Frameworks", "lib", framework_logos
     )
-    for key, val in framework_logos.items():
-        data: str = await get_data_txt(f"{site.base_url}/assets/tech_icons/{val}.svg")
-        await tech_ico(framework_ico_container, key, data)
-    # --------
-    Label(stack_container, "lang-ico-container-title", inner_text="Tools")
-    tool_ico_container = Div(
-        stack_container, "tool-ico-container", class_list={"group-ico-container"}
+    # :::::::--------
+    tool_ico_container_root = Div(
+        skills_container, "tool-ico-container", class_list={"group-ico-container-root"}
     )
-    for key, val in tool_logos.items():
-        data: str = await get_data_txt(f"{site.base_url}/assets/tech_icons/{val}.svg")
-        await tech_ico(tool_ico_container, key, data)
-
-    # for key,val in png_logos.items():
-    #     data:str = await get_data_txt(f"{site.base_url}/assets/png_icons/{val}.png")
-    #     await tech_ico_img(logo_container, key, data)
+    await tech_ico_group(tool_ico_container_root, "Tools & Tech", "tool", tool_logos)
+    # :::::::--------
 
     return about_container
 
 
 # ----------------------
-async def tech_ico(container, id: str, svg_data: str):
-    x_container = Div(container, f"{id}-container", class_list={"ico-container"})
-    SVG(x_container, id, class_list={"tech-ico"}, svg_image=svg_data)
-    Label(x_container, f"{id}-label", class_list={"tech-ico-label"}, inner_text=id)
-
-
-# ----------------------
-async def tech_ico_img(container, id: str, img_data: str):
-    x_container = Div(container, f"{id}-container", class_list={"ico-container"})
-    Img(x_container, id, class_list={"tech-ico"}, src=img_data)
-    Label(x_container, f"{id}-label", class_list={"tech-ico-label"}, inner_text=id)
+async def tech_ico_group(container, title: str, identifier: str, source_map: dict):
+    Label(container, f"{identifier}-ico-container-title", inner_text=title)
+    group_ico_container = Div(
+        container, f"{identifier}-ico-container", class_list={"group-ico-container"}
+    )
+    for id, name in source_map.items():
+        img_data: str = await get_data_txt(
+            f"{site.base_url}/assets/tech_icons/{name}.svg"
+        )
+        x_container = Div(
+            group_ico_container, f"{id}-container", class_list={"ico-container"}
+        )
+        SVG(x_container, id, class_list={"tech-ico"}, svg_image=img_data)
+        Label(
+            x_container, f"{id}-tooltip", class_list={"tech-ico-tooltip"}, inner_text=id
+        )
