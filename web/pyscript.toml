@@ -33,6 +33,7 @@ files = [
     "web/context.py",
     "web/elements/dock_button.py",
     "web/elements/dock.py",
+    "web/elements/link_icon.py",
     "web/app.py",
     "web/queries.py",
     "web/vars/static_assets.py",

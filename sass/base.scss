@@ -57,3 +57,11 @@ py-terminal {
         width: 100% !important;
     }
 }
+
+a {
+    color: none;
+}
+
+a:visited {
+    color: inherit;
+}
