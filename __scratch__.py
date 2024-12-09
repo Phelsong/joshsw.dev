@@ -1,4 +1,4 @@
-# %%
+# %% C1
 from functools import lru_cache
 
 
@@ -44,8 +44,9 @@ print(dom_router.get_routes())
 dom_router.nav("/home/nest")
 dom_router.remove_route("/home")
 
-# %%
-#
+# -------
+# %% C2
+
 import os
 
 tlist: list = []
@@ -53,7 +54,8 @@ for x in os.walk("/assets/tech-icons"):
     tlist = x[2]
 print(tlist)
 
-# %%
+# --------
+# %% C3
 # lib
 from pyscript import document
 
@@ -73,7 +75,7 @@ async def repl_page(parent):
         pass
 
     return repl_container
-    
+
     repl_button = DockButton(
         dock_container,
         "repl-dock-button",
@@ -86,4 +88,6 @@ async def repl_page(parent):
     async def r_button_listener(event) -> None:
         await dom_router.nav("/repl")
 
+
 # ---------------------------
+# %% C4
