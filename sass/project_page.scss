@@ -1,0 +1,25 @@
+#project-page-container {
+    width: 100%;
+    min-height: 90%;
+    flex-flow: row wrap;
+}
+
+.project-container {
+    width: 16rem;
+    height: 16rem;
+    flex-flow: column nowrap;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #4c566a;
+}
+
+.project-img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.link-icon {
+    width: 2rem;
+    height: 3rem;
+}

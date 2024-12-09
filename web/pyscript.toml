@@ -1,0 +1,42 @@
+packages = ["orjson", "async_lru"]
+version = "0.1.3"
+#interpreter = "/packages/pyodide/0.26.0/full/pyodide/pyodide.mjs"
+interpreter = "https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.mjs"
+
+[splashscreen]
+autoclose = true
+
+[[fetch]]
+from = "https://dev.local:8062/"
+# from = "https://phel.ngrok.dev/"
+files = [
+    "senza/components/__init__.py",
+    "senza/components/abase.py",
+    "senza/components/div.py",
+    "senza/components/anchor.py",
+    "senza/components/button.py",
+    "senza/components/form.py",
+    "senza/components/img.py",
+    "senza/components/input.py",
+    "senza/components/label.py",
+    "senza/components/h1.py",
+    "senza/components/h2.py",
+    "senza/components/h3.py",
+    "senza/components/h4.py",
+    "senza/components/h5.py",
+    "senza/components/h6.py",
+    "senza/components/ptag.py",
+    "senza/components/select.py",
+    "senza/components/svg.py",
+    "senza/components/span.py",
+    "senza/dom_router.py",
+    "web/context.py",
+    "web/elements/dock_button.py",
+    "web/elements/dock.py",
+    "web/app.py",
+    "web/queries.py",
+    "web/vars/static_assets.py",
+    "web/views/about_page.py",
+    "web/views/dp_life_page.py",
+    "web/views/project_page.py",
+]
