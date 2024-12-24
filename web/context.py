@@ -1,7 +1,6 @@
 """This file contains global site context variables"""
 
 import os
-from pyscript import py_import
 from pyscript.web import page, div
 
 from senza.components.div import Div
