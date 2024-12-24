@@ -1,11 +1,9 @@
 services:
   joshsw_dev:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ../
+      dockerfile: ./docker/Dockerfile
     container_name: joshsw_dev
-    volumes:
-      - ../:/opt/website
     ports:
       - "8062:8062"
     restart: unless-stopped

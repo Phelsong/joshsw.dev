@@ -1,0 +1,16 @@
+.git
+.gitignore
+.gitmodules
+.github
+.idea
+.mypy_cache
+.ropeproject
+.venv
+__pycache__
+certs
+scripts
+utils
+docker
+sass
+
+__scratch__.py

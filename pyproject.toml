@@ -27,4 +27,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 start = 'main:server.run'
+docker_build = 'scripts.docker:build'
+compose_up = 'scripts.docker:compose_up'
 compile_sass = 'scripts.compile_sass:compile_sass'
+sync_pyodide = 'utils.sync_pyodide:sync_pyodide'
+sync_submodules = 'utils.sync_submodules:sync_submodules'

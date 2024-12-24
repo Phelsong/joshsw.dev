@@ -1,10 +1,11 @@
 # libs
 import os
-from uvicorn import Server as uv_server, Config as uv_config
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+from uvicorn import Config as uv_config, Server as uv_server
 
 # imports
 from routers.nav import nav
@@ -43,6 +44,12 @@ app.mount(
     app=StaticFiles(directory="senza"),
     name="senza",
 )
+app.mount(
+    path="/packages",
+    app=StaticFiles(directory="packages"),
+    name="packages",
+)
+# -----------
 app.mount(
     path="/web",
     app=StaticFiles(directory="web"),

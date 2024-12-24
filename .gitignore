@@ -2,7 +2,7 @@
 
 /certs
 .ropeproject/*
-
+packages
 
 # dependencies
 node_modules
