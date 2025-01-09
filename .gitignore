@@ -3,6 +3,7 @@
 /certs
 .ropeproject/*
 packages
+pyscript/*
 
 # dependencies
 node_modules
