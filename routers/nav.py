@@ -30,7 +30,8 @@ SITE_ENV = os.environ["SITE_ENV"] if os.environ.get("SITE_ENV") else "developmen
 
 @nav.get(path="/", response_class=HTMLResponse)
 async def dashboard() -> HTMLResponse:
-    html = """
+    html = (
+        """
 <!DOCTYPE pyscript>
 <html lang="en">
   <head>
@@ -52,13 +53,14 @@ async def dashboard() -> HTMLResponse:
   </head>
   <body>
     <!-- ==================================================== -->
+    """
+        f'<script async type="py" config="/web/pyscript.toml">SITE_ENV="{SITE_ENV}"</script>'
+    """
     <script async type="py" src="/web/app.py" config="/web/pyscript.toml"></script>
-    """
-    f'<script async type="py">SITE_ENV={SITE_ENV}</script>'
-    """
   </body>
 </html>
 """
+    )
     return HTMLResponse(html, media_type="text/html", status_code=200)
 
 

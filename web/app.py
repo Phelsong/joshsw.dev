@@ -14,6 +14,11 @@ from web.views.project_page import project_page
 
 # =======================
 async def main() -> None:
+    if SITE_ENV == "PRODUCTION":
+        site.base_url = "https://www.joshsw.dev"
+    else:
+        site.base_url = "https://dev.local:8062"
+
     await create_dock()
     # ==================================
     await dom_router.add(about_page, "/")

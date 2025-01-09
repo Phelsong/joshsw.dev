@@ -17,8 +17,3 @@ class Site:
 site = Site()
 
 print(site.body.id)
-
-if SITE_ENV == "PRODUCTION":
-    site.base_url = "https://www.joshsw.dev"
-else:
-    site.base_url = "https://dev.local:8062"
