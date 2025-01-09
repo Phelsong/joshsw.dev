@@ -28,7 +28,7 @@ else:
 server: uvi_server = uvi_server(server_config)
 # -------------------------------------
 app = FastAPI(root_path=".")
-origins: list[str] = ["http://localhost", "http://127.0.0.1", "http://[::]", "https://*.joshsw.dev"]
+origins: list[str] = ["http://localhost", "http://127.0.0.1", "http://[::]", "https://*.joshsw.dev", "https://brave-cliff-0fa190610.1.azurestaticapps.net"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
