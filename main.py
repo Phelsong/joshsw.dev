@@ -18,7 +18,6 @@ server_config: uvi_config = uvi_config(
 
 if os.environ.get("SITE_ENV") == "PRODUCTION":
     server_config.headers.append(("Cache-Control", "must-revalidate"))
-    server_config.port = 8000
 else:
     server_config.log_level = "debug"
     server_config.ssl_certfile = "./certs/dev-cert.pem"
@@ -28,7 +27,16 @@ else:
 server: uvi_server = uvi_server(server_config)
 # -------------------------------------
 app = FastAPI(root_path=".")
-origins: list[str] = ["http://localhost", "http://127.0.0.1", "http://[::]", "https://*.joshsw.dev", "https://brave-cliff-0fa190610.1.azurestaticapps.net","jdev-beg0bfd8bhdxgxez.centralus-01.azurewebsites.net"]
+origins: list[str] = [
+    "http://localhost",
+    "http://127.0.0.1",
+    "http://[::]",
+    "https://localhost",
+    "https://127.0.0.1",
+    "https://[::]",
+    "https://dev.local",
+    "https://*.joshsw.dev",
+]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
