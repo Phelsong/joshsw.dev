@@ -53,6 +53,9 @@ async def dashboard() -> HTMLResponse:
   <body>
     <!-- ==================================================== -->
     <script async type="py" src="/web/app.py" config="/web/pyscript.toml"></script>
+    """
+    f'<script async type="py">SITE_ENV={SITE_ENV}</script>'
+    """
   </body>
 </html>
 """
