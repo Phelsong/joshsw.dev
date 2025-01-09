@@ -1,14 +1,16 @@
 packages = ["orjson", "async_lru"]
 version = "0.1.3"
-interpreter = "/packages/pyodide/0.26.0/full/pyodide/pyodide.mjs"
-#interpreter = "https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.mjs"
+# interpreter = "/packages/pyodide/0.26.0/full/pyodide/pyodide.mjs"
+interpreter = "https://cdn.jsdelivr.net/pyodide/v0.26.1/full/pyodide.mjs"
 
 [splashscreen]
 autoclose = true
 
 [[fetch]]
-from = "https://dev.local:8062/"
+# from = "https://dev.local:8062/"
 # from = "https://phel.ngrok.dev/"
+from = "https://www.joshsw.dev"
+
 files = [
     "senza/components/__init__.py",
     "senza/components/abase.py",
