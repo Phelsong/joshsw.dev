@@ -8,7 +8,7 @@ on:
     branches:
       - main
 env:
-  APP_LOCATION: "/" # location of your client code
+  APP_LOCATION: "/public" # location of your client code
   API_LOCATION: "/" # location of your api source code - optional
   #APP_ARTIFACT_LOCATION: "build" # location of client code build output
 
