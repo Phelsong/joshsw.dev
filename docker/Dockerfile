@@ -14,4 +14,4 @@ EXPOSE 8062
 
 USER runner
 SHELL [ "/bin/bash"]
-CMD [ "./docker/start.sh" ]
+CMD [ "./start.sh" ]
