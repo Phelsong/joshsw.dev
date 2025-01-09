@@ -9,7 +9,7 @@ autoclose = true
 [[fetch]]
 # from = "https://dev.local:8062/"
 # from = "https://phel.ngrok.dev/"
-from = "https://joshsw.dev"
+from = "jdev-beg0bfd8bhdxgxez.centralus-01.azurewebsites.net"
 
 files = [
     "senza/components/__init__.py",
