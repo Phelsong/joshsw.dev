@@ -1,31 +1,33 @@
-[tool.poetry]
+[project]
 name = "joshsw-dev"
 version = "0.1.0"
 description = "personal site"
-authors = ["josh wilkinson <joshswilkinson@outlook.com>"]
-license = "proprietary"
+authors = [
+    {name = "Josh S Wilkinson",email = "joshswilkinson@pm.me"}
+]
+license = {text = "proprietary"}
 readme = "README.md"
-packages = [{ include = "../joshsw.dev" }, { include = "senza" }]
+requires-python = ">=3.9.20"
+dependencies = [
+    "fastapi (>=0.115.6,<0.116.0)",
+    "uvicorn[bin] (>=0.34.0,<0.35.0)",
+    "orjson (>=3.10.14,<4.0.0)",
+    "async-lru (>=2.0.4,<3.0.0)"
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9.20"
-fastapi = "^0.110.0"
-uvicorn = "^0.27.1"
-orjson = "^3.9.15"
-async-lru = "^2.0.4"
+
+[tool.poetry]
+packages = [{include = "../joshsw.dev"}]
+
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.12.1"
-
-[tool.pyright]
-venvPath = "."
-venv = ".venv"
+black = "^24.10.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry.scripts]
+[project.scripts]
 start = 'main:server.run'
 docker_build = 'scripts.docker:build'
 compose_up = 'scripts.docker:compose_up'

@@ -5,26 +5,27 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from uvicorn import Config as uv_config, Server as uv_server
+from uvicorn import Config as uvi_config, Server as uvi_server
 
 # imports
 from routers.nav import nav
 
 # =============================================================================
 # print(os.environ.get("SITE_ENV"))
-server_config: uv_config = uv_config(
+server_config: uvi_config = uvi_config(
     app="main:app", host="0.0.0.0", port=8062, root_path=".", reload=True
 )
 
 if os.environ.get("SITE_ENV") == "PRODUCTION":
     server_config.headers.append(("Cache-Control", "must-revalidate"))
+    server_config.port = 443
 else:
     server_config.log_level = "debug"
     server_config.ssl_certfile = "./certs/dev-cert.pem"
     server_config.ssl_keyfile = "./certs/dev-key.pem"
     server_config.headers.append(("Cache-Control", "must-revalidate"))
 
-server: uv_server = uv_server(server_config)
+server: uvi_server = uvi_server(server_config)
 # -------------------------------------
 app = FastAPI(root_path=".")
 origins: list[str] = ["http://localhost", "http://127.0.0.1", "http://[::]", "https://*.joshsw.dev"]

@@ -18,7 +18,7 @@ site = Site()
 
 print(site.body.id)
 
-if os.getenv("SITE_ENV") == "PROD":
-    site.base_url = ""
+if os.getenv("SITE_ENV") == "PRODUCTION":
+    site.base_url = "https://www.joshsw.dev"
 else:
     site.base_url = "https://dev.local:8062"
