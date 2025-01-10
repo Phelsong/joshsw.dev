@@ -4,8 +4,8 @@ services:
       context: ../
       dockerfile: ./docker/Dockerfile
     container_name: joshsw_dev
-    ports:
-      - "8062:8062"
+    networks:
+      - "public"
     restart: unless-stopped
     environment:
       - SITE_ENV=PRODUCTION
