@@ -41,7 +41,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET"],
     allow_headers=["*"],
 )
 
@@ -83,6 +83,13 @@ def get_status() -> dict[str, str]:
 def get_favicon() -> FileResponse:
     return FileResponse(path="public/favicon.ico", status_code=200)
 
+@app.get("/robots.txt")
+def get_robots() -> FileResponse:
+    return FileResponse(path="public/robots.txt", status_code=200)
+
+@app.get("/sitemap.xml")
+def get_sitemap() -> FileResponse:
+    return FileResponse(path="public/sitemap.xml", status_code=200)
 
 # ------------------------------------------------------------------------------
 
