@@ -19,11 +19,11 @@ async def main() -> None:
     else:
         site.base_url = "https://dev.local:8062"
 
-    await create_dock()
     # ==================================
     await dom_router.add(about_page, "/")
     await dom_router.add(project_page, "projects")
     await dom_router.nav("/")
+    await create_dock()
 
 
 # ==================================
