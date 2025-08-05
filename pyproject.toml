@@ -2,22 +2,20 @@
 name = "joshsw-dev"
 version = "0.1.0"
 description = "personal site"
-authors = [
-    {name = "Josh S Wilkinson",email = "joshswilkinson@pm.me"}
-]
-license = {text = "proprietary"}
+authors = [{ name = "Josh S Wilkinson", email = "joshswilkinson@pm.me" }]
+license = { text = "proprietary" }
 readme = "README.md"
 requires-python = ">=3.9.20"
 dependencies = [
-    "fastapi (>=0.115.6,<0.116.0)",
-    "uvicorn[bin] (>=0.34.0,<0.35.0)",
-    "orjson (>=3.10.14,<4.0.0)",
-    "async-lru (>=2.0.4,<3.0.0)"
+  "fastapi (>=0.115.6,<0.116.0)",
+  "uvicorn[bin] (>=0.34.0,<0.35.0)",
+  "orjson (>=3.10.14,<4.0.0)",
+  "async-lru (>=2.0.4,<3.0.0)",
 ]
 
 
 [tool.poetry]
-packages = [{include = "../joshsw.dev"}]
+packages = [{ include = "../joshsw.dev" }]
 
 
 [tool.poetry.group.dev.dependencies]
@@ -27,6 +25,7 @@ black = "^24.10.0"
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+# legacy poetry
 [project.scripts]
 start = 'main:server.run'
 docker_build = 'scripts.docker:build'
@@ -34,3 +33,18 @@ compose_up = 'scripts.docker:compose_up'
 compile_sass = 'scripts.compile_sass:compile_sass'
 sync_pyodide = 'utils.sync_pyodide:sync_pyodide'
 sync_submodules = 'utils.sync_submodules:sync_submodules'
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+joshsw-dev = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+start = 'python main.py'
+docker_build = 'python scripts/docker_build.py'
+compose_up = 'python scripts/compose_up.py'
+compile_sass = 'python scripts/compile_sass.py'
+sync_pyodide = 'python utils/sync_pyodide.py'
+sync_submodules = 'python utils/sync_submodules.py'
