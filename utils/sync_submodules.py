@@ -10,3 +10,7 @@ def sync_submodules():
         os.system(f"git submodule update --init --recursive")
     except AssertionError:
         print(f"You must be in {project_dir} to sync submodules")
+
+
+if __name__ == "__main__":
+    sync_submodules()

@@ -4,6 +4,7 @@
 .ropeproject
 packages
 pyscript/*
+.pixi
 
 # dependencies
 node_modules

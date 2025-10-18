@@ -6,12 +6,6 @@ authors = [{ name = "Josh S Wilkinson", email = "joshswilkinson@pm.me" }]
 license = { text = "proprietary" }
 readme = "README.md"
 requires-python = ">=3.9.20"
-dependencies = [
-  "fastapi (>=0.115.6,<0.116.0)",
-  "uvicorn[bin] (>=0.34.0,<0.35.0)",
-  "orjson (>=3.10.14,<4.0.0)",
-  "async-lru (>=2.0.4,<3.0.0)",
-]
 
 
 [tool.poetry]
@@ -48,3 +42,16 @@ compose_up = 'python scripts/compose_up.py'
 compile_sass = 'python scripts/compile_sass.py'
 sync_pyodide = 'python utils/sync_pyodide.py'
 sync_submodules = 'python utils/sync_submodules.py'
+
+[target.unix.dependencies]
+pixi-pycharm = "*"
+
+[tool.pixi.host-dependencies]
+black = ">=25.1.0,<26"
+
+[tool.pixi.dependencies]
+fastapi = ">=0.119.0,<0.120"
+orjson = ">=3.11.3,<4"
+async-lru = ">=2.0.5,<3"
+uvicorn = ">=0.37.0,<0.38"
+pixi-pycharm = "*"
